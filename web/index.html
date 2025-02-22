@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -27,12 +15,111 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Dark theme styles */
+    body {
+      background-color: #121212;
+      /* Dark background */
+      color: #ffffff;
+      /* White text */
+      margin: 0;
+      /* Remove default body margins */
+      font-family: sans-serif;
+      /* Use a common font for consistency */
+      overflow: hidden;
+      /* Prevent scrollbars during loading */
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Full viewport height */
+      width: 100vw;
+      /* Full viewport width */
+      gap: 50px;
+      /* 50px gap between elements */
+    }
+
+    /* Animated loading spinner (SVG) - Clean and Efficient */
+    .loader {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 8px solid #333;
+      /* Lighter dark for contrast */
+      border-top-color: #32CD32;
+      /* Lime Green */
+      animation: spin 1s linear infinite;
+      /* Keep the spin animation */
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-size: 1.2em;
+      color: #32CD32;
+      /* Lime Green */
+    }
+
+    /* Hide the Flutter content initially */
+    #flutter_target {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- Loading screen -->
+  <div class="loading-container">
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <!-- Flutter app container (initially hidden) -->
+  <div id="flutter_target">
+    <script src="flutter_bootstrap.js" async></script>
+  </div>
+
+  <script>
+
+    window.addEventListener('flutter-initialized', function (event) {
+      //hide loading and show the target
+      const loadingContainer = document.querySelector('.loading-container');
+      const flutterTarget = document.querySelector('#flutter_target');
+
+      //smooth transition
+      loadingContainer.style.transition = 'opacity 0.5s ease';
+      flutterTarget.style.transition = 'opacity 0.5s ease';
+
+      // Hide the loading screen and show target with a delay
+      loadingContainer.style.opacity = 0;
+      flutterTarget.style.display = 'block'; // Show target
+      setTimeout(() => {
+        flutterTarget.style.opacity = 1;
+      }, 50); // delay the target, show little bit later
+
+      // Remove the loading container after the transition ends
+      setTimeout(() => {
+        loadingContainer.remove();
+      }, 550); // slightly longer than the transition duration
+
+    });
+
+  </script>
+
 </body>
+
 </html>
