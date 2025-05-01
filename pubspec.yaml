@@ -21,12 +21,21 @@ dependencies:
   flutter_bloc: ^9.1.0
   dartx: ^1.2.0
   google_fonts: ^6.2.1
+  fluentui_system_icons: ^1.1.273
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
 
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  web:
+    generate: true
+    image_path: "assets/IMG_20240628_162010_317 (1)~2 (1).jpg"
+    background_color: "#4CAF50"
+    theme_color: "#4CAF50"
