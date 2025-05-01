@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -53,14 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC2Iat7HTtnKDAivp8uZ1xLKyuY0BXzMf8',
-    appId: '1:95856586450:web:5b59214149d289add7070b',
-    messagingSenderId: '95856586450',
-    projectId: 'developersunited',
-    authDomain: 'developersunited.firebaseapp.com',
-    databaseURL: 'https://developersunited-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'developersunited.appspot.com',
-    measurementId: 'G-54Y84C237L',
+    apiKey: 'AIzaSyA9Vgk5jqJGVLVj48nCN65XArdUjuu650k',
+    appId: '1:918230178484:web:035c86c0200eb493e715e1',
+    messagingSenderId: '918230178484',
+    projectId: 'ismailhossainismailjames',
+    authDomain: 'ismailhossainismailjames.firebaseapp.com',
+    storageBucket: 'ismailhossainismailjames.firebasestorage.app',
+    measurementId: 'G-NKYT78VCNE',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCF4dXhCYlRnq2jTYkYOjkJG_MMLDGkaoY',
+    appId: '1:918230178484:android:07d1ff6322747926e715e1',
+    messagingSenderId: '918230178484',
+    projectId: 'ismailhossainismailjames',
+    storageBucket: 'ismailhossainismailjames.firebasestorage.app',
   );
 
 }

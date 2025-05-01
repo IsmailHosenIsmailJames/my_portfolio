@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918230178484",
+    "project_id": "ismailhossainismailjames",
+    "storage_bucket": "ismailhossainismailjames.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918230178484:android:07d1ff6322747926e715e1",
+        "android_client_info": {
+          "package_name": "com.example.my_portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF4dXhCYlRnq2jTYkYOjkJG_MMLDGkaoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

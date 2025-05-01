@@ -22,6 +22,9 @@ dependencies:
   dartx: ^1.2.0
   google_fonts: ^6.2.1
   fluentui_system_icons: ^1.1.273
+  gap: ^3.0.1
+  simple_icons: ^14.6.1
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +35,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/img/
 
 flutter_launcher_icons:
   web:
