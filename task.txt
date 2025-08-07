@@ -1,0 +1,13 @@
+I am an Mobile app developer. I am developing mobile Application professionally since November, 2023.
+I got my first job at Impala Intech. The time of join  was 2024, June. You can get more info about Impala Intech here : https://impalaintech.com/about-us/
+This is my github link : https://github.com/IsmailHosenIsmailJames
+This is my linkedin : https://www.linkedin.com/in/ismail-hossain-3756a4211/
+
+Now, I need a portfolio website that will have admin panel. You see, linkedin has lots of features to showcase projects, reword/awards, experiences etc....
+I need a website that will have features like adding projects, adding rewords, adding post, others opinion about me etc...
+This need to be compatible with mobile, desktop view. The admin panel need to be user friendly. Case all will maintained form admin panel.
+
+I need best of the best beautiful but easy to use UI. It must have Dark and Light Dynamic theme.
+
+I have my cv here as PDF in root projects files.
+
